@@ -4,18 +4,7 @@ class Note:
     def __init__(self, head, text):
         self.__head = head
         self.__text = text
-        self.__setTime()
-
-    def __setTime(self):
         self.__time = str(datetime.now()).split(".")[0]
 
-    def changeHead(self, head):
-        self.__head = head
-        self.__setTime()
-
-    def changeText(self, text):
-        self.__text = text
-        self.__setTime()
-
-    def printNote(self):
-        print(f"{self.__head}: {self.__text} - ({self.__time})")
+    def getNote(self):
+        return f"{self.__head}: {self.__text} ({self.__time})"
