@@ -9,5 +9,9 @@ class Note:
     def __setTime(self):
         self.__time = str(datetime.now()).split(".")[0]
 
+    def changeHead(self, head):
+        self.__head = head
+        self.__setTime()
+
     def printNote(self):
         print(f"{self.__head}: {self.__text} - ({self.__time})")
