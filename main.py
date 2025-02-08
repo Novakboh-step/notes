@@ -6,7 +6,9 @@ while True:
     print("1 - show notes")
     print("2 - add note")
     print("3 - delete note")
-    print("4 - exit")
+    print("4 - change head")
+    print("5 - change text")
+    print("6 - exit")
     a = input()
     if a == "1":
         for i in range(len(notes)):
@@ -16,5 +18,9 @@ while True:
     elif a == "3":
         notes.pop(int(input("Enter index")) - 1)
     elif a == "4":
+        notes[int(input("Enter index")) - 1].changeHead(input("Enter head"))
+    elif a == "5":
+        notes[int(input("Enter index")) - 1].changeText(input("Enter text"))
+    elif a == "6":
         print("Goodbye")
         break
