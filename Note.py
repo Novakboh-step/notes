@@ -13,5 +13,9 @@ class Note:
         self.__head = head
         self.__setTime()
 
+    def changeText(self, text):
+        self.__text = text
+        self.__setTime()
+
     def printNote(self):
         print(f"{self.__head}: {self.__text} - ({self.__time})")
