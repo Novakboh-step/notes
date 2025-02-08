@@ -9,18 +9,18 @@ while True:
     print("4 - change head")
     print("5 - change text")
     print("6 - exit")
-    a = input()
+    a = input("Your choice: ")
     if a == "1":
         for i in range(len(notes)):
             notes[i].printNote()
     elif a == "2":
-        notes.append(Note(input("Enter head"), input("Enter text")))
+        notes.append(Note(input("Enter head: "), input("Enter text: ")))
     elif a == "3":
-        notes.pop(int(input("Enter index")) - 1)
+        notes.pop(int(input("Enter index: ")) - 1)
     elif a == "4":
-        notes[int(input("Enter index")) - 1].changeHead(input("Enter head"))
+        notes[int(input("Enter index: ")) - 1].changeHead(input("Enter head: "))
     elif a == "5":
-        notes[int(input("Enter index")) - 1].changeText(input("Enter text"))
+        notes[int(input("Enter index: ")) - 1].changeText(input("Enter text: "))
     elif a == "6":
         print("Goodbye")
         break
